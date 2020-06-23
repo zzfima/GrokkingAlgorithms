@@ -10,17 +10,17 @@ def main():
     graph["peggy"] = []
     graph["thom"] = []
     graph["jonny"] = []
-    q = deque()
-    q += graph["you"]
+    peopleQueue = deque()
+    peopleQueue += graph["you"]
 
     while True:
-        element = q.popleft()
+        element = peopleQueue.popleft()
         if "1" in element:
             print(element)
             break
         element = graph[element]
         if element != []:
-            q += element
+            peopleQueue += element
 
 
 
